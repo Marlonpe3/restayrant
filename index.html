@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerDelight - Las mejores hamburguesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Banner promocional -->
+    <div class="promo-banner">
+        🎉 ¡Envío gratis en pedidos superiores a $20! 🚚
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Burger<span>Delight</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Las hamburguesas más deliciosas de la ciudad</h2>
+                <p>Ingredientes frescos y preparación artesanal para una experiencia única</p>
+                <a href="#menu" class="btn">Ver menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta especial -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <h2>¡Oferta Especial de Verano!</h2>
+                <p>Compra 2 hamburguesas especiales y lleva una tercera gratis. ¡Solo por tiempo limitado!</p>
+                
+                <div class="offer-timer">
+                    <div class="timer-item">
+                        <div class="timer-number" id="days">00</div>
+                        <div class="timer-label">Días</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="hours">00</div>
+                        <div class="timer-label">Horas</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="minutes">00</div>
+                        <div class="timer-label">Minutos</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="seconds">00</div>
+                        <div class="timer-label">Segundos</div>
+                    </div>
+                </div>
+                
+                <a href="#menu" class="btn offer-btn">Aprovechar Oferta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú</h2>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar hamburguesas...">
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="clasicas">Clásicas</button>
+                <button class="filter-btn" data-filter="especiales">Especiales</button>
+                <button class="filter-btn" data-filter="pollo">Pollo</button>
+                <button class="filter-btn" data-filter="vegetarianas">Vegetarianas</button>
+            </div>
+            <div class="menu-grid" id="productos-container">
+                <!-- Los productos se cargarán dinámicamente desde script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Las mejores hamburguesas que he probado. Ingredientes frescos y una combinación de sabores increíble. ¡Volveré pronto!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Martínez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Martínez</h4>
+                            <p>Cliente frecuente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">El servicio es excelente y las hamburguesas son simplemente deliciosas. Mi favorita es la Bacon Monster.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura González">
+                        </div>
+                        <div class="author-info">
+                            <h4>Laura González</h4>
+                            <p>Primera visita</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Como vegetariana, me encantó su opción vegetariana. Sabe increíble y las porciones son generosas. ¡Altamente recomendado!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="María Fernández">
+                        </div>
+                        <div class="author-info">
+                            <h4>María Fernández</h4>
+                            <p>Cliente regular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p>En BurgerDelight nos apasiona crear las mejores hamburguesas utilizando ingredientes frescos y de la más alta calidad. Nuestro compromiso es ofrecer una experiencia gastronómica única que deleite a nuestros clientes.</p>
+                <p>Fundada en 2010, hemos crecido gracias a la preferencia de nuestros clientes que valoran el sabor auténtico y el servicio excepcional. Cada hamburguesa es preparada con amor y atención a los detalles.</p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <h4>Horario:</h4>
+                        <p>Lun-Vie: 11am - 10pm</p>
+                        <p>Sáb-Dom: 12pm - 11pm</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Premios:</h4>
+                        <p>Mejor Hamburguesa 2023</p>
+                        <p>Elección del Público 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Equipo BurgerDelight">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@burgerdelight.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    
+                    <div class="map-container" style="margin-top: 30px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184133404904!2d-73.98757428459372!3d40.75802897932693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1633452000000!5m2!1sen!2sus" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono">
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-body">
+                <div class="cart-items" id="cart-items">
+                    <!-- Los items del carrito se cargarán aquí -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span id="cart-total">$0.00</span></p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <button class="btn checkout-btn">Finalizar Compra</button>
+                <button class="btn clear-cart">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BurgerDelight</h3>
+                    <p>Las mejores hamburguesas artesanales con ingredientes frescos y de calidad.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes: 11am - 10pm</p>
+                    <p>Sábado y Domingo: 12pm - 11pm</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas especiales</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BurgerDelight. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
